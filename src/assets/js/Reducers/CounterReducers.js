@@ -9,7 +9,7 @@ const CounterReducers = (state = initialState, action) => {
         return false;
     }
 
-    const newState = state;
+    const newState = Object.assign({}, state);
 
     if (action.type === 'ADD') {
         newState.counter += 1;
